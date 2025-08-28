@@ -1,0 +1,16 @@
+body {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.page {
+  font-family: "Montserrat", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 20px;
+}
+.page__content {
+  border-radius: 6px;
+  box-shadow: 0 5px 5px gainsboro;
+  border: solid 2px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  background-color: #fff;
+  margin: auto;
+}
