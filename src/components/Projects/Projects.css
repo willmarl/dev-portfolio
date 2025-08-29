@@ -299,10 +299,21 @@
 .project__modal-content .slick-slider {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__modal-content .slick-list {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .project__modal-content .slick-track {
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .project__modal-content .slick-slide {
@@ -416,6 +427,52 @@
   .project__modal {
     width: 95vw;
     height: 95vh;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .project__modal-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+  }
+
+  .project__modal-content .slick-slider {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .project__modal-content .slick-list {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+  }
+
+  .project__modal-content .slick-track {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+  }
+
+  .project__modal-slide {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+
+  .project__modal-image {
+    max-width: 85% !important;
+    max-height: 80vh !important;
+    object-fit: contain !important;
+    margin: auto !important;
   }
 
   .project__modal-close {
@@ -437,5 +494,9 @@
 
   .project__modal .slick-next {
     right: 15px;
+  }
+
+  .project__modal .slick-dots {
+    bottom: 10px !important;
   }
 }
