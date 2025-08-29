@@ -26,8 +26,8 @@ function Projects() {
       id: "invare",
       title: "Invare",
       description:
-        "A comprehensive inventory management system built with modern web technologies. Features real-time updates, advanced filtering, and intuitive user interface design.",
-      tags: ["OpenAI"],
+        "Invare is a full-stack inventory app for makers to track Arduino, ESP, and Raspberry Pi modules. Users can add parts from a curated list or custom entries, view tags and code snippets, and search by category. I designed the app with excalidraw, then worked with Claude to bring the UI to life. It includes a lightweight GPT-powered assistant that answers questions based on the user’s inventory. No vector DB or RAG setup (yet) just a smart preprompt from the backend.",
+      tags: ["OpenAI", "MERN", "Inventory Management"],
       links: [
         {
           type: "github",
@@ -56,8 +56,16 @@ function Projects() {
       id: "bbi",
       title: "Bonanza Breeze Inc",
       description:
-        "A small HVAC business in Tampa. Has public website to make appointments and custom CRM admin dashboard for staff",
-      tags: ["CRM", "Square", "Resend"],
+        "Built a full-stack HVAC business management system for Bonanza Breeze Inc, a Tampa-based company. Delivered both a custom CRM dashboard (appointments, customers, quotes, staff, payments) and a responsive public-facing website. Also acted as a technical consultant—guiding the non-technical client through registering a domain, configuring DNS, and deploying via Oracle Cloud’s free-tier VPS to keep costs low. Integrated Resend for email delivery and Square API for payments, ensuring a secure, modern, self-hosted solution on a startup budget.",
+      tags: [
+        "MERN",
+        "CRM",
+        "Square API",
+        "Resend",
+        "Oracle Cloud",
+        "Self-Hosted",
+        "Full-Stack",
+      ],
       links: [
         {
           type: "website",
