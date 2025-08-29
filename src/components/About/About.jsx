@@ -1,18 +1,18 @@
 import Portrait from "../../assets/portrait.png";
-import HTML5 from "../../assets/HTML5.svg";
-import CSS3 from "../../assets/CSS3.svg";
-import JavaScript from "../../assets/JavaScript.svg";
-import Git from "../../assets/Git.svg";
-import GitHub from "../../assets/GitHub.svg";
-import Figma from "../../assets/Figma.svg";
-import Linux from "../../assets/Linux.svg";
-import React from "../../assets/React.svg";
-import Nodejs from "../../assets/Node.js.svg";
-import MongoDB from "../../assets/MongoDB.svg";
-import Express from "../../assets/Express.svg";
-import Postman from "../../assets/Postman.svg";
-import NGINX from "../../assets/NGINX.svg";
-import GoogleCloud from "../../assets/Google Cloud.svg";
+import HTML5 from "../../assets/tech-stack/HTML5.svg";
+import CSS3 from "../../assets/tech-stack/CSS3.svg";
+import JavaScript from "../../assets/tech-stack/JavaScript.svg";
+import Git from "../../assets/tech-stack/Git.svg";
+import GitHub from "../../assets/tech-stack/GitHub.svg";
+import Figma from "../../assets/tech-stack/Figma.svg";
+import Linux from "../../assets/tech-stack/Linux.svg";
+import React from "../../assets/tech-stack/React.svg";
+import Nodejs from "../../assets/tech-stack/Node.js.svg";
+import MongoDB from "../../assets/tech-stack/MongoDB.svg";
+import Express from "../../assets/tech-stack/Express.svg";
+import Postman from "../../assets/tech-stack/Postman.svg";
+import NGINX from "../../assets/tech-stack/NGINX.svg";
+import GoogleCloud from "../../assets/tech-stack/Google Cloud.svg";
 import "./About.css";
 
 function About() {
@@ -42,7 +42,7 @@ function About() {
   }));
 
   return (
-    <div className="about">
+    <section className="about">
       <div className="about__info">
         <div className="about__bio">
           <h2 className="about__title">William Marlette</h2>
@@ -78,7 +78,7 @@ function About() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

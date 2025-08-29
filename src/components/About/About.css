@@ -39,10 +39,14 @@
   object-fit: cover;
 }
 
-.about__track {
+.about__slider {
   position: relative;
-  width: 100%;
-  height: 80px;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  /* Remove translateX(-500px) */
 }
 
 .about__slider__shape {
@@ -107,7 +111,7 @@
     transform: translateX(-150px);
   }
   100% {
-    transform: translateX(calc(100vw + 150px));
+    transform: translateX(calc(100vw + 150px)); /* This now works correctly */
   }
 }
 
