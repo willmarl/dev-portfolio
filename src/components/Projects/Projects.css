@@ -1,0 +1,441 @@
+.projects {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(231, 225, 255);
+  backdrop-filter: blur(1px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects__title {
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 60px;
+  color: rgb(231, 225, 255);
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.projects__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Alternate project layout */
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project__carousel {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project__slide {
+  outline: none;
+  height: 300px;
+  position: relative;
+}
+
+.project__slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.1));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project__slide:hover::after {
+  opacity: 1;
+}
+
+.project__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.project__image:hover {
+  transform: scale(1.05);
+}
+
+.project__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project__title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0;
+  color: rgb(231, 225, 255);
+  text-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.project__desc {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(231, 225, 255, 0.9);
+}
+
+.project__links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.project__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid transparent;
+  color: rgb(231, 225, 255);
+}
+
+.project__link--github {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.project__link--github:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.project__link--website {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.project__link--website:hover {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.project__link-icon {
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+.project__tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.project__tag {
+  padding: 8px 16px;
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: rgb(231, 225, 255);
+  backdrop-filter: blur(5px);
+}
+
+/* Slick carousel customization for space theme */
+.project__carousel .slick-dots {
+  bottom: 15px;
+}
+
+.project__carousel .slick-dots li button:before {
+  color: rgba(231, 225, 255, 0.6);
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.project__carousel .slick-dots li.slick-active button:before {
+  color: rgb(139, 92, 246);
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+}
+
+.project__carousel .slick-arrow {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  transition: all 0.3s ease;
+}
+
+.project__carousel .slick-arrow:hover {
+  background: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+.project__carousel .slick-arrow:before {
+  font-size: 20px;
+  color: rgb(231, 225, 255);
+}
+
+.project__carousel .slick-prev {
+  left: 15px;
+}
+
+.project__carousel .slick-next {
+  right: 15px;
+}
+
+/* Modal Styles - Space Theme */
+.project__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.project__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  outline: none;
+  width: 90vw;
+  height: 90vh;
+  max-width: 1200px;
+  max-height: 800px;
+}
+
+.project__modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(139, 92, 246, 0.3);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  backdrop-filter: blur(10px);
+  color: rgb(231, 225, 255);
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__modal-close:hover {
+  background: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.8);
+  transform: scale(1.1);
+}
+
+.project__modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__modal-content .slick-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.project__modal-content .slick-track {
+  height: 100%;
+}
+
+.project__modal-content .slick-slide {
+  height: 100% !important;
+}
+
+.project__modal-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100% !important;
+  outline: none;
+}
+
+.project__modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal slick customization */
+.project__modal .slick-dots {
+  bottom: 20px;
+}
+
+.project__modal .slick-dots li button:before {
+  color: rgba(231, 225, 255, 0.7);
+  font-size: 16px;
+}
+
+.project__modal .slick-dots li.slick-active button:before {
+  color: rgb(139, 92, 246);
+  text-shadow: 0 0 15px rgba(139, 92, 246, 1);
+}
+
+.project__modal .slick-arrow {
+  z-index: 1001;
+  width: 60px;
+  height: 60px;
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  transition: all 0.3s ease;
+}
+
+.project__modal .slick-arrow:hover {
+  background: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+}
+
+.project__modal .slick-arrow:before {
+  font-size: 24px;
+  color: rgb(231, 225, 255);
+}
+
+.project__modal .slick-prev {
+  left: 30px;
+}
+
+.project__modal .slick-next {
+  right: 30px;
+}
+
+@media (max-width: 968px) {
+  .project {
+    flex-direction: column !important;
+    gap: 30px;
+    padding: 25px;
+  }
+
+  .project__carousel {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .project__info {
+    text-align: center;
+  }
+
+  .project__title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 50px 15px;
+  }
+
+  .projects__title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .projects__grid {
+    gap: 60px;
+  }
+
+  .project {
+    padding: 20px;
+  }
+
+  .project__slide {
+    height: 250px;
+  }
+
+  .project__modal {
+    width: 95vw;
+    height: 95vh;
+  }
+
+  .project__modal-close {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .project__modal .slick-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .project__modal .slick-prev {
+    left: 15px;
+  }
+
+  .project__modal .slick-next {
+    right: 15px;
+  }
+}
