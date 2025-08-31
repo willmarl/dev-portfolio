@@ -32,7 +32,7 @@ function Contact() {
       type: "resume",
       label: "Resume",
       value: "View PDF",
-      url: "/public/resume.pdf", // Put your resume in public folder
+      url: "./resume.pdf",
     },
   ];
 
