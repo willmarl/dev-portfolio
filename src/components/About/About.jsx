@@ -1,45 +1,16 @@
 import Portrait from "../../assets/portrait.png";
-import HTML5 from "../../assets/tech-stack/HTML5.svg";
-import CSS3 from "../../assets/tech-stack/CSS3.svg";
-import JavaScript from "../../assets/tech-stack/JavaScript.svg";
-import Git from "../../assets/tech-stack/Git.svg";
-import GitHub from "../../assets/tech-stack/GitHub.svg";
-import Figma from "../../assets/tech-stack/Figma.svg";
-import Linux from "../../assets/tech-stack/Linux.svg";
-import React from "../../assets/tech-stack/React.svg";
-import Nodejs from "../../assets/tech-stack/Node.js.svg";
-import MongoDB from "../../assets/tech-stack/MongoDB.svg";
-import Express from "../../assets/tech-stack/Express.svg";
-import Postman from "../../assets/tech-stack/Postman.svg";
-import NGINX from "../../assets/tech-stack/NGINX.svg";
-import GoogleCloud from "../../assets/tech-stack/Google Cloud.svg";
 import "./About.css";
 
+const techStackModules = import.meta.glob("../../assets/tech-stack/*.svg", {
+  eager: true,
+});
+
 function About() {
-  const icons = [
-    <img src={HTML5} alt="HTML5" />,
-    <img src={CSS3} alt="CSS3" />,
-    <img src={JavaScript} alt="JavaScript" />,
-    <img src={Git} alt="Git" />,
-    <img src={GitHub} alt="GitHub" />,
-    <img src={Figma} alt="Figma" />,
-    <img src={Linux} alt="Linux" />,
-    <img src={React} alt="React" />,
-    <img src={Nodejs} alt="Node.js" />,
-    <img src={MongoDB} alt="MongoDB" />,
-    <img src={Express} alt="Express" />,
-    <img src={Postman} alt="Postman" />,
-    <img src={NGINX} alt="NGINX" />,
-    <img src={GoogleCloud} alt="Google Cloud" />,
-  ];
-
-  const animationDuration = 30; // seconds
-
-  // Auto-calculate delays for even spacing
-  const shapes = icons.map((icon, index) => ({
-    icon,
-    delay: -(index * animationDuration) / icons.length,
-  }));
+  const icons = Object.keys(techStackModules).map((path) => {
+    const module = techStackModules[path];
+    const name = path.split("/").pop().replace(".svg", "");
+    return { name, src: module.default };
+  });
 
   return (
     <section className="about">
@@ -65,16 +36,13 @@ function About() {
         </div>
       </div>
       <div className="about__slider">
-        {shapes.map((shape, index) => (
-          <div
-            key={index}
-            className="about__slider__shape"
-            style={{
-              animationDelay: `${shape.delay}s`,
-              animationDuration: `${animationDuration}s`,
-            }}
-          >
-            <span className="about__slider__icon">{shape.icon}</span>
+        {icons.map((icon, index) => (
+          <div key={index} className="about__slider__shape">
+            <img
+              className="about__slider__icon"
+              src={icon.src}
+              alt={icon.name}
+            />
           </div>
         ))}
       </div>
