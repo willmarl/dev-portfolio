@@ -15,6 +15,12 @@ import bbi1 from "../../assets/project-images/BBI/bbi-1.png";
 import bbi2 from "../../assets/project-images/BBI/bbi-2.png";
 import bbi3 from "../../assets/project-images/BBI/bbi-3.png";
 import bbi4 from "../../assets/project-images/BBI/bbi-4.png";
+import comfypick1 from "../../assets/project-images/ezcomfypick/comfypick-1.jpg";
+import comfypick2 from "../../assets/project-images/ezcomfypick/comfypick-2.jpg";
+import comfypick3 from "../../assets/project-images/ezcomfypick/comfypick-3.jpg";
+import comfypick4 from "../../assets/project-images/ezcomfypick/comfypick-4.jpg";
+import comfypick5 from "../../assets/project-images/ezcomfypick/comfypick-5.jpg";
+import comfypick6 from "../../assets/project-images/ezcomfypick/comfypick-6.jpg";
 
 // set app element for react-modal accessibility
 Modal.setAppElement("#root");
@@ -74,6 +80,28 @@ function Projects() {
         { original: bbi2 },
         { original: bbi3 },
         { original: bbi4 },
+      ],
+    },
+    {
+      id: "comfypick",
+      title: "ezcomfypick",
+      description:
+        "A mobile-first webui for easily sorting ComfyUI generated content (imgs/gifs + vids) with a Tinder-style swipe interface. Intended for local homelab use as its a docker.The app at its core is moving or deleting files with FastAPI using Vite + React for frontend. Small database only needed if keeping tags, everything else detects file system to use its infrastructure.",
+      tags: ["FastAPI", "React", "Docker", "Homelab"],
+      links: [
+        {
+          type: "github",
+          label: "Github repo",
+          url: "https://github.com/willmarl/ezcomfypick",
+        },
+      ],
+      images: [
+        { original: comfypick1 },
+        { original: comfypick2 },
+        { original: comfypick3 },
+        { original: comfypick4 },
+        { original: comfypick5 },
+        { original: comfypick6 },
       ],
     },
   ];
