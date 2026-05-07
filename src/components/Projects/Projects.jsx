@@ -4,10 +4,13 @@ import Slider from "react-slick";
 import "./Projects.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import invare1 from "../../assets/project-images/invare/invare-1.png";
-import invare2 from "../../assets/project-images/invare/invare-2.png";
-import invare3 from "../../assets/project-images/invare/invare-3.png";
-import invare4 from "../../assets/project-images/invare/invare-4.png";
+import invare1 from "../../assets/project-images/invare/invare-1.jpg";
+import invare2 from "../../assets/project-images/invare/invare-2.jpg";
+import invare3 from "../../assets/project-images/invare/invare-3.jpg";
+import invare4 from "../../assets/project-images/invare/invare-4.jpg";
+import invare5 from "../../assets/project-images/invare/invare-5.jpg";
+import invare6 from "../../assets/project-images/invare/invare-6.jpg";
+import invare7 from "../../assets/project-images/invare/invare-7.jpg";
 import bbi1 from "../../assets/project-images/BBI/bbi-1.png";
 import bbi2 from "../../assets/project-images/BBI/bbi-2.png";
 import bbi3 from "../../assets/project-images/BBI/bbi-3.png";
@@ -27,18 +30,8 @@ function Projects() {
       title: "Invare",
       description:
         "Invare is a full-stack inventory app for makers to track Arduino, ESP, and Raspberry Pi modules. Users can add parts from a curated list or custom entries, view tags and code snippets, and search by category. I designed the app with excalidraw, then worked with Claude to bring the UI to life. It includes a lightweight GPT-powered assistant that answers questions based on the user’s inventory. No vector DB or RAG setup (yet) just a smart preprompt from the backend.",
-      tags: ["OpenAI", "MERN", "Inventory Management"],
+      tags: ["Nextjs", "NestJs", "Inventory Management"],
       links: [
-        {
-          type: "github",
-          label: "Frontend Repo",
-          url: "https://github.com/willmarl/invare",
-        },
-        {
-          type: "github",
-          label: "Backend Repo",
-          url: "https://github.com/willmarl/invare-api",
-        },
         {
           type: "website",
           label: "Live website",
@@ -50,6 +43,9 @@ function Projects() {
         { original: invare2 },
         { original: invare3 },
         { original: invare4 },
+        { original: invare5 },
+        { original: invare6 },
+        { original: invare7 },
       ],
     },
     {
