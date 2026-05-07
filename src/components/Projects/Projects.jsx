@@ -35,7 +35,7 @@ function Projects() {
       id: "invare",
       title: "Invare",
       description:
-        "Invare is a full-stack inventory app for makers to track Arduino, ESP, and Raspberry Pi modules. Users can add parts from a curated list or custom entries, view tags and code snippets, and search by category. I designed the app with excalidraw, then worked with Claude to bring the UI to life. It includes a lightweight GPT-powered assistant that answers questions based on the user’s inventory. No vector DB or RAG setup (yet) just a smart preprompt from the backend.",
+        "Invare is a full-stack inventory app for makers to track Arduino, ESP, and Raspberry Pi modules. Users can add parts from a curated list or custom entries, view tags and code snippets, and search by category. I designed the app with excalidraw, then worked with Claude to bring the UI to life. Its based off my NextJS + NestJS boilerplate repo Monno",
       tags: ["Nextjs", "NestJs", "Inventory Management"],
       links: [
         {
