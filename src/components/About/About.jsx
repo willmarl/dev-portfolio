@@ -19,16 +19,16 @@ function About() {
           <h2 className="about__title">William Marlette</h2>
 
           <div className="about__desc">
-            I’m a fullstack developer with a focus on building custom business
-            tools, from public websites to backend APIs and CRM dashboards. My
-            recent work includes a full deployment for a real-world client —
-            website, admin dashboard, and Square-integrated payment system. I
-            love designing around both the user experience and system
-            architecture — the start and the finish. Long-term, I’m working
-            toward automating both digital and physical workflows, with a vision
-            of combining software engineering, privacy-first infrastructure, and
-            mechatronics. My homelab is where I prototype, learn, and experiment
-            with that future.
+            I’m a fullstack developer focused on building real tools that solve
+            real problems — from public-facing business sites to backend APIs,
+            admin dashboards, and homelab utilities. My recent work includes a
+            full production deployment for a real client: website, CRM
+            dashboard, appointment booking system, and Discord-integrated
+            notifications. I like owning the full stack — from schema design to
+            the UI people actually use. Long-term I’m working toward combining
+            software engineering, privacy-first self-hosted infrastructure, and
+            mechatronics. My homelab is where I prototype and experiment with
+            that.
           </div>
         </div>
         <div className="about__image">

@@ -21,6 +21,12 @@ import comfypick3 from "../../assets/project-images/ezcomfypick/comfypick-3.jpg"
 import comfypick4 from "../../assets/project-images/ezcomfypick/comfypick-4.jpg";
 import comfypick5 from "../../assets/project-images/ezcomfypick/comfypick-5.jpg";
 import comfypick6 from "../../assets/project-images/ezcomfypick/comfypick-6.jpg";
+import monno1 from "../../assets/project-images/monno/monno-1.jpg";
+import monno2 from "../../assets/project-images/monno/monno-2.jpg";
+import monno3 from "../../assets/project-images/monno/monno-3.jpg";
+import monno4 from "../../assets/project-images/monno/monno-4.jpg";
+import monno5 from "../../assets/project-images/monno/monno-5.jpg";
+import monno6 from "../../assets/project-images/monno/monno-6.jpg";
 
 // set app element for react-modal accessibility
 Modal.setAppElement("#root");
@@ -32,11 +38,38 @@ function Projects() {
 
   const projects = [
     {
+      id: "monno",
+      title: "Monno",
+      description:
+        "My personal full-stack boilerplate — the base I build every new project on. NestJS backend + NextJS frontend in a pnpm monorepo (the name comes from Mono repo + NestJS + NextJS). Packed with everything I'd want on any new site: custom auth from scratch (username/password, OAuth, 2-token system, sessions with geolocation and risk scoring), role-based access, admin dashboard, BullMQ worker, file uploads (local or S3), Stripe infrastructure, rate limiting, Swagger docs, and 231 tests across unit, integration, API, and E2E. Also ships with an AI scaffolding CLI that generates structured prompts for adding new CRUD resources without hallucination.",
+      tags: ["NestJS", "Nextjs", "Prisma", "PostgreSQL", "Redis", "BullMQ", "Boilerplate"],
+      links: [
+        {
+          type: "github",
+          label: "GitHub repo",
+          url: "https://github.com/willmarl/monno",
+        },
+        {
+          type: "website",
+          label: "Live demo",
+          url: "https://willmarl.github.io/monno-demo/",
+        },
+      ],
+      images: [
+        { original: monno1 },
+        { original: monno2 },
+        { original: monno3 },
+        { original: monno4 },
+        { original: monno5 },
+        { original: monno6 },
+      ],
+    },
+    {
       id: "invare",
       title: "Invare",
       description:
-        "Invare is a full-stack inventory app for makers to track Arduino, ESP, and Raspberry Pi modules. Users can add parts from a curated list or custom entries, view tags and code snippets, and search by category. I designed the app with excalidraw, then worked with Claude to bring the UI to life. Its based off my NextJS + NestJS boilerplate repo Monno",
-      tags: ["Nextjs", "NestJs", "Inventory Management"],
+        "Invare is a full-stack hardware inventory tracker for makers. Solve the problem of forgetting what you own and buying duplicate parts — a 30-second lookup beats a 2-week shipping delay. Browse official community-curated units (Arduino boards, sensors, motors, etc.) with attached code snippets and library notes, clone them into your own inventory, or create custom entries. Built on my NestJS + NextJS boilerplate Monno. A complete rebuild of the original MERN version.",
+      tags: ["Nextjs", "NestJS", "Prisma", "PostgreSQL", "Inventory Management"],
       links: [
         {
           type: "website",
@@ -58,15 +91,17 @@ function Projects() {
       id: "bbi",
       title: "Bonanza Breeze Inc",
       description:
-        "Built a full-stack HVAC business management system for Bonanza Breeze Inc, a Tampa-based company. Delivered both a custom CRM dashboard (appointments, customers, quotes, staff, payments) and a responsive public-facing website. Also acted as a technical consultant—guiding the non-technical client through registering a domain, configuring DNS, and deploying via Oracle Cloud’s free-tier VPS to keep costs low. Integrated Resend for email delivery and Square API for payments, ensuring a secure, modern, self-hosted solution on a startup budget.",
+        "Full-stack website and CRM for a Tampa-based HVAC startup. Customers can request appointments with an interactive booking calendar (real-time slot availability, conflict prevention, blocked days) or submit quote requests. Every new appointment and quote fires a Discord webhook so the owner gets notified instantly without checking an inbox. Admin dashboard covers customers, staff, calendar, quotes, appointments, and audit logs. Also consulted on domain registration, DNS setup, and self-hosted deployment on Oracle Cloud’s free tier. Built on my NestJS + NextJS boilerplate Monno — a full rebuild of the original MERN version.",
       tags: [
-        "MERN",
+        "Nextjs",
+        "NestJS",
+        "Prisma",
+        "PostgreSQL",
         "CRM",
-        "Square API",
+        "Discord Webhook",
         "Resend",
         "Oracle Cloud",
         "Self-Hosted",
-        "Full-Stack",
       ],
       links: [
         {
@@ -86,8 +121,8 @@ function Projects() {
       id: "comfypick",
       title: "ezcomfypick",
       description:
-        "A mobile-first webui for easily sorting ComfyUI generated content (imgs/gifs + vids) with a Tinder-style swipe interface. Intended for local homelab use as its a docker.The app at its core is moving or deleting files with FastAPI using Vite + React for frontend. Small database only needed if keeping tags, everything else detects file system to use its infrastructure.",
-      tags: ["FastAPI", "React", "Docker", "Homelab"],
+        "A mobile-first web UI for sorting ComfyUI-generated images and videos with a Tinder-style swipe interface — built to run on a homelab so you can filter AI generations from your phone without sitting at your PC. Swipe right to keep (drops into a collection folder), swipe left to trash, undo your last swipe. Gallery view lets you browse kept images, filter by collection or tags, and move files around. The backend is just Python moving files with pathlib — collections are real filesystem folders, no DB coupling. SQLite only tracks tags. Ships as a single Docker container published to Docker Hub.",
+      tags: ["FastAPI", "Python", "React", "SQLite", "Docker", "Homelab"],
       links: [
         {
           type: "github",
