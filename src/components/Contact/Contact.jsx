@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Contact.css";
 
 const STATUS_CONFIG = {
@@ -10,11 +11,25 @@ const STATUS_CONFIG = {
 };
 
 function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = () => {
+    navigator.clipboard.writeText("williammarlette6@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const contactLinks = [
     {
       type: "email",
       label: "Email",
-      value: "williammarlette3@gmail.com",
+      value: "williammarlette6@gmail.com",
+    },
+    {
+      type: "resume",
+      label: "Fullstack Resume",
+      value: "View PDF",
+      url: "./resume-fullstack.pdf",
     },
     {
       type: "github",
@@ -23,16 +38,16 @@ function Contact() {
       url: "https://github.com/willmarl",
     },
     {
+      type: "resume",
+      label: "QA Resume",
+      value: "View PDF",
+      url: "./resume-qa.pdf",
+    },
+    {
       type: "linkedin",
       label: "LinkedIn",
       value: "/in/willmarl",
       url: "https://linkedin.com/in/willmarl",
-    },
-    {
-      type: "resume",
-      label: "Resume",
-      value: "View PDF",
-      url: "./resume.pdf",
     },
   ];
 
@@ -42,23 +57,30 @@ function Contact() {
         <h2 className="contact__title">Drop a Line</h2>
         <p className="contact__subtitle">Here's how you can reach me</p>
 
-        <div className="contact__links">
-          {contactLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link?.url}
-              target={link.type !== "email" ? "_blank" : undefined}
-              rel={link.type !== "email" ? "noopener noreferrer" : undefined}
-              download={link.download}
-              className={`contact__link contact__link--${link.type}`}
-            >
-              <div className="contact__link-content">
+        <div className="contact__grid">
+          {contactLinks.map((link, index) =>
+            link.type === "email" ? (
+              <button
+                key={index}
+                onClick={handleEmailClick}
+                className={`contact__link contact__link--email ${copied ? "copied" : ""}`}
+              >
                 <h3 className="contact__link-label">{link.label}</h3>
                 <p className="contact__link-value">{link.value}</p>
-              </div>
-              <div className="contact__link-arrow">→</div>
-            </a>
-          ))}
+              </button>
+            ) : (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`contact__link contact__link--${link.type}`}
+              >
+                <h3 className="contact__link-label">{link.label}</h3>
+                <p className="contact__link-value">{link.value}</p>
+              </a>
+            )
+          )}
         </div>
 
         <div className="contact__cta">
