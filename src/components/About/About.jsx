@@ -19,16 +19,17 @@ function About() {
           <h2 className="about__title">William Marlette</h2>
 
           <div className="about__desc">
-            I’m a fullstack developer focused on building real tools that solve
-            real problems — from public-facing business sites to backend APIs,
-            admin dashboards, and homelab utilities. My recent work includes a
-            full production deployment for a real client: website, CRM
-            dashboard, appointment booking system, and Discord-integrated
-            notifications. I like owning the full stack — from schema design to
-            the UI people actually use. Long-term I’m working toward combining
-            software engineering, privacy-first self-hosted infrastructure, and
-            mechatronics. My homelab is where I prototype and experiment with
-            that.
+            Before writing a line of app code I was already building PCs,
+            running a Proxmox/Unraid homelab, managing Linux servers, and
+            setting up VPSes. The coding came later, once I wanted to build web
+            UIs for the self-hosted stuff I was already running. I did a web dev
+            bootcamp, learned MERN, then self-taught NestJS and Next.js. Now I
+            build full-stack apps and the infrastructure that runs them:
+            TypeScript, NestJS, Next.js, PostgreSQL, Docker, and whatever Linux
+            server needs configuring. My homelab is always running something: a
+            Blender render farm off a local 4090, ComfyUI for image gen, Home
+            Assistant, game servers for friends. Most of my projects started as
+            tools I wanted but couldn't find, so I built them.
           </div>
         </div>
         <div className="about__image">
