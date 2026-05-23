@@ -34,7 +34,7 @@ function Contact() {
     {
       type: "github",
       label: "GitHub",
-      value: "@willcat",
+      value: "@willmarl",
       url: "https://github.com/willmarl",
     },
     {
@@ -79,7 +79,7 @@ function Contact() {
                 <h3 className="contact__link-label">{link.label}</h3>
                 <p className="contact__link-value">{link.value}</p>
               </a>
-            )
+            ),
           )}
         </div>
 
