@@ -41,8 +41,16 @@ function Projects() {
       id: "monno",
       title: "Monno",
       description:
-        "My personal full-stack boilerplate — the base I build every new project on. NestJS backend + NextJS frontend in a pnpm monorepo (the name comes from Mono repo + NestJS + NextJS). Packed with everything I'd want on any new site: custom auth from scratch (username/password, OAuth, 2-token system, sessions with geolocation and risk scoring), role-based access, admin dashboard, BullMQ worker, file uploads (local or S3), Stripe infrastructure, rate limiting, Swagger docs, and 231 tests across unit, integration, API, and E2E. Also ships with an AI scaffolding CLI that generates structured prompts for adding new CRUD resources without hallucination.",
-      tags: ["NestJS", "Nextjs", "Prisma", "PostgreSQL", "Redis", "BullMQ", "Boilerplate"],
+        "My personal full-stack boilerplate, the base I build every new project on. NestJS backend + Next.js frontend in a pnpm monorepo (name comes from mono repo + NestJS + Next.js). Comes with everything I'd want on any new site: custom auth from scratch (username/password, OAuth, 2-token system, sessions with geolocation and risk scoring), role-based access, admin dashboard, BullMQ worker, file uploads (local or S3), Stripe infrastructure, rate limiting, Swagger docs, and 231 tests across unit, integration, API, and E2E. Also has an AI scaffolding CLI that generates structured prompts for adding new CRUD resources, so the AI stays on track instead of going off and inventing its own architecture.",
+      tags: [
+        "NestJS",
+        "Nextjs",
+        "Prisma",
+        "PostgreSQL",
+        "Redis",
+        "BullMQ",
+        "Boilerplate",
+      ],
       links: [
         {
           type: "github",
@@ -68,8 +76,14 @@ function Projects() {
       id: "invare",
       title: "Invare",
       description:
-        "Invare is a full-stack hardware inventory tracker for makers. Solve the problem of forgetting what you own and buying duplicate parts — a 30-second lookup beats a 2-week shipping delay. Browse official community-curated units (Arduino boards, sensors, motors, etc.) with attached code snippets and library notes, clone them into your own inventory, or create custom entries. Built on my NestJS + NextJS boilerplate Monno. A complete rebuild of the original MERN version.",
-      tags: ["Nextjs", "NestJS", "Prisma", "PostgreSQL", "Inventory Management"],
+        "Invare is a full-stack hardware inventory tracker for makers. You forget what you have, order duplicates, then wait 2 weeks for parts you already own. A 30-second lookup fixes that. Browse official community-curated units (Arduino boards, sensors, motors, etc.) with attached code snippets and library notes, clone them into your own inventory, or create custom entries. Built on my NestJS + Next.js boilerplate Monno. A complete rebuild of the original MERN version.",
+      tags: [
+        "Nextjs",
+        "NestJS",
+        "Prisma",
+        "PostgreSQL",
+        "Inventory Management",
+      ],
       links: [
         {
           type: "website",
@@ -91,7 +105,7 @@ function Projects() {
       id: "bbi",
       title: "Bonanza Breeze Inc",
       description:
-        "Full-stack website and CRM for a Tampa-based HVAC startup. Customers can request appointments with an interactive booking calendar (real-time slot availability, conflict prevention, blocked days) or submit quote requests. Every new appointment and quote fires a Discord webhook so the owner gets notified instantly without checking an inbox. Admin dashboard covers customers, staff, calendar, quotes, appointments, and audit logs. Also consulted on domain registration, DNS setup, and self-hosted deployment on Oracle Cloud’s free tier. Built on my NestJS + NextJS boilerplate Monno — a full rebuild of the original MERN version.",
+        "Full-stack website and CRM for a Tampa-based HVAC startup. Customers can request appointments with an interactive booking calendar (real-time slot availability, conflict prevention, blocked days) or submit quote requests. Every new appointment and quote fires a Discord webhook so the owner gets notified instantly without checking an inbox. Admin dashboard covers customers, staff, calendar, quotes, appointments, and audit logs. Also consulted on domain registration, DNS setup, and self-hosted deployment on Oracle Cloud's free tier. Built on my NestJS + Next.js boilerplate Monno. A full rebuild of the original MERN version.",
       tags: [
         "Nextjs",
         "NestJS",
@@ -121,7 +135,7 @@ function Projects() {
       id: "comfypick",
       title: "ezcomfypick",
       description:
-        "A mobile-first web UI for sorting ComfyUI-generated images and videos with a Tinder-style swipe interface — built to run on a homelab so you can filter AI generations from your phone without sitting at your PC. Swipe right to keep (drops into a collection folder), swipe left to trash, undo your last swipe. Gallery view lets you browse kept images, filter by collection or tags, and move files around. The backend is just Python moving files with pathlib — collections are real filesystem folders, no DB coupling. SQLite only tracks tags. Ships as a single Docker container published to Docker Hub.",
+        "A mobile-first web UI for sorting ComfyUI-generated images and videos with a Tinder-style swipe interface, built to run on a homelab so you can filter AI generations from your phone without sitting at your PC. Swipe right to keep (drops into a collection folder), swipe left to trash, undo your last swipe. Gallery view lets you browse kept images, filter by collection or tags, and move files around. The backend is just Python moving files with pathlib. Collections are real filesystem folders, no DB coupling. SQLite only tracks tags. Ships as a single Docker container published to Docker Hub.",
       tags: ["FastAPI", "Python", "React", "SQLite", "Docker", "Homelab"],
       links: [
         {
