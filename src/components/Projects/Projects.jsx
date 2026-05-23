@@ -27,6 +27,10 @@ import monno3 from "../../assets/project-images/monno/monno-3.jpg";
 import monno4 from "../../assets/project-images/monno/monno-4.jpg";
 import monno5 from "../../assets/project-images/monno/monno-5.jpg";
 import monno6 from "../../assets/project-images/monno/monno-6.jpg";
+import dect1 from "../../assets/project-images/DECT/DECT_1.jpg";
+import dect2 from "../../assets/project-images/DECT/DECT_2.jpg";
+import dect3 from "../../assets/project-images/DECT/DECT_3.jpg";
+import dect4 from "../../assets/project-images/DECT/DECT_4.jpg";
 
 // set app element for react-modal accessibility
 Modal.setAppElement("#root");
@@ -151,6 +155,33 @@ function Projects() {
         { original: comfypick4 },
         { original: comfypick5 },
         { original: comfypick6 },
+      ],
+    },
+    {
+      id: "dect",
+      title: "DECT",
+      description:
+        "DECT (Don't Enjoy Creating Tests?) automates writing test cases from functional requirement documents. Upload a PDF spec, pick which requirements to process, and it runs an 8-step LLM pipeline that produces a ready-to-import CSV covering atomic breakdown, equivalence partitioning, boundary value analysis, deduplication, and final test case generation with steps, preconditions, test data, and expected results. Each step saves its output to disk, so if something fails you resume from where it left off without reprocessing. The LLM provider is swappable via config: OpenAI, Ollama, or Anthropic. Runs locally with a Gradio UI served through FastAPI.",
+      tags: [
+        "Python",
+        "LangChain",
+        "LangGraph",
+        "FastAPI",
+        "Gradio",
+        "OpenAI API",
+      ],
+      links: [
+        {
+          type: "github",
+          label: "Github repo",
+          url: "https://github.com/willmarl/dect",
+        },
+      ],
+      images: [
+        { original: dect1 },
+        { original: dect2 },
+        { original: dect3 },
+        { original: dect4 },
       ],
     },
   ];
