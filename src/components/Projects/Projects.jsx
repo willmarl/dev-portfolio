@@ -45,7 +45,7 @@ function Projects() {
       id: "monno",
       title: "Monno",
       description:
-        "My personal full-stack boilerplate, the base I build every new project on. NestJS backend + Next.js frontend in a pnpm monorepo (name comes from mono repo + NestJS + Next.js). Comes with everything I'd want on any new site: custom auth from scratch (username/password, OAuth, 2-token system, sessions with geolocation and risk scoring), role-based access, admin dashboard, BullMQ worker, file uploads (local or S3), Stripe infrastructure, rate limiting, Swagger docs, and 231 tests across unit, integration, API, and E2E. Also has an AI scaffolding CLI that generates structured prompts for adding new CRUD resources, so the AI stays on track instead of going off and inventing its own architecture.",
+        "My personal full-stack boilerplate, the base I build every new project on. NestJS backend + Next.js frontend in a pnpm monorepo (name comes from mono repo + NestJS + Next.js). Comes with everything I'd want on any new site: custom auth from scratch (username/password, OAuth, 2-token system, sessions with geolocation and risk scoring), role-based access, admin dashboard, BullMQ worker, file uploads (local or S3), Stripe infrastructure, rate limiting, Swagger docs, and tests across unit, integration, API, and E2E. I usually have AI write the unit and integration tests and prep the E2E, since it still isn't reliable enough to own the end-to-end flows. Also has an AI scaffolding CLI that generates structured prompts for adding new CRUD resources, so the AI stays on track instead of going off and inventing its own architecture.",
       tags: [
         "NestJS",
         "Nextjs",
